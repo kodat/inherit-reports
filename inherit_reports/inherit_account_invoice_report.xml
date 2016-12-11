@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<template id="inherit_account_document" inherit_id="account.report_invoice_document">
+			<xpath expr="//table[@class='table table-condensed']//thead//tr" position="replace">
+			            <th>Description</th>
+                        <th>Quantity</th>
+                        <th class="text-right">Unit Price</th>
+                        <th class="text-right" groups="sale.group_discount_per_so_line">Discount (%)</th>
+                        <th class="text-right">Amount</th>
+			</xpath>
+			<xpath expr="//tbody[@class='invoice_tbody']//tr//td[5]" position="replace">
+			</xpath>
+			<xpath expr="//div[@class='row'][2]//table//tr[2]" position="replace">
+			</xpath>
+			
+			<xpath expr="//div[@class='row'][2]//table//tr[@class='border-black']//td[1]" position="replace">
+				<td><strong>Total</strong></td>
+			</xpath>
+			<xpath expr="//div[@class='row'][2]//table//tr[@class='border-black'][2]" position="replace">
+			</xpath>
+			<xpath expr="//div[@class='row'][3]" position="replace">
+			</xpath>
+		</template>
+	</data>
+</openerp>
